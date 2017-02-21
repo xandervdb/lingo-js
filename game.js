@@ -37,7 +37,7 @@ function StartGame() {
     }
 
     // nieuw geheim woord
-	geheimwoord = words5[ Math.floor(Math.random() * words.length) ];
+	geheimwoord = words[ Math.floor(Math.random() * words.length) ];
     console.log(geheimwoord);
     geheimeLetters = geheimwoord.split("");
 
