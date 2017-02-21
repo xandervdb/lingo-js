@@ -1,4 +1,4 @@
-var words = [
+var words5 = [
 	"appel",
 	"aldus",
 	"afwas",

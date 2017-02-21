@@ -1,11 +1,51 @@
-var geheimwoord = words[ Math.floor(Math.random() * words.length) ];
-console.log(geheimwoord);
-var geheimeLetters = geheimwoord.split("");
+var geheimwoord;
+var geheimeLetters;
 
+var isStarted = false;
+var letterCount = 5;		// default is 5
 var poging = 0;
 
-document.getElementById('letter0.0').value = geheimwoord.charAt(0);
 
+function StartGame() {
+
+    // retrieve checked item, and set letterCount to that value
+    var elements = document.getElementsByName('count');
+    for (var i = 0, length = elements.length; i < length; i++) {
+        if (elements[i].checked) {
+            letterCount = elements[i].value;
+            console.log('Setting letterCount to: ' + letterCount);
+            break;
+        }
+    }
+
+    // now create game interface
+    var gameTable = document.getElementById('lingoTable');
+    if (null == gameTable) {
+        alert("Error: can't create game interface, missing element lingoTable");
+        return false;
+    }
+    gameTable.innerHTML = "";
+    // create rows
+    for (var rows = 0; rows<5; rows++) {
+        var row = "<tr>";
+        // create cells
+        for (var cells = 0; cells<letterCount; cells++) {
+            row += "<td><input class='form-control' id='letter" + rows + "." + cells + "'></td>";
+        }
+        row += "</tr>";
+        gameTable.innerHTML += row;
+    }
+
+    // nieuw geheim woord
+	geheimwoord = words5[ Math.floor(Math.random() * words.length) ];
+    console.log(geheimwoord);
+    geheimeLetters = geheimwoord.split("");
+
+    // zet eerste letter
+    document.getElementById('letter0.0').value = geheimwoord.charAt(0);
+
+    isStarted = true;
+}
 
 function Check() {
 	// get the HTML elements
