@@ -25,7 +25,7 @@ function StartGame() {
         return false;
     }
     gameTable.innerHTML = "";
-    // create rows
+    // create 5 rows
     for (var rows = 0; rows<5; rows++) {
         var row = "<tr>";
         // create cells
