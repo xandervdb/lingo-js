@@ -5,7 +5,7 @@ De opdracht bestaat uit twee type eisen, functionele eisen en technische eisen. 
 
 ### Wat is Lingo
 
-![Voorbeeld](http://cdn.nldebaar-parotas.savviihq.com/wp-content/uploads/2013/03/Screen-Shot-2013-03-11-at-7.01.34-PM.png)
+![Voorbeeld](lingo.png)
 
 Lingo is een woordspel dat een combinatie is van Mastermind en Bingo. Twee teams van twee mensen gaan met elkaar de strijd aan.
 
